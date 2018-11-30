@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Comment
+from .forms import CommentForm
 
 
 def index(request):
@@ -11,4 +12,8 @@ def index(request):
 
 
 def sign(request):
+    form = CommentForm()
+
+    context = {'form': form}
+
     return render(request, 'guestbook/sign.html')
