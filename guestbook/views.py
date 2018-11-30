@@ -16,4 +16,4 @@ def sign(request):
 
     context = {'form': form}
 
-    return render(request, 'guestbook/sign.html')
+    return render(request, 'guestbook/sign.html', context)
